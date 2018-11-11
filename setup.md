@@ -55,11 +55,12 @@ instructions below.
 
 If you are not already, [Login to SAFE](https://www.archer.ac.uk/tier2/). Then:
 
-  1. Go to the Menu Login accounts and select Request login account
-  2. Choose the dcXXX project “Choose Project for Machine Account” box.
-  3. Choose Cirrus by selecting from the available systems.
-  4. Enter the username you would prefer to use on the system. Every
-     username must be unique,
+  1. Go to the Menu "Login accounts" and select "Request login account".
+  2. Choose the "dcXXX" project from the “Choose Project for Machine Account” box.
+  3. Choose "Cirrus" from the list of available systems.
+  4. Enter the username you would prefer to use on the system. (Every
+     username must be unique so you may be asked to choose another if you choose one
+     already in use,)
 
 Now you have to wait for your request to be approved. When this has happened,
 your account will be created on Cirrus. Once this has been done, you will be
