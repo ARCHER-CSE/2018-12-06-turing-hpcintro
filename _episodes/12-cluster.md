@@ -1,6 +1,6 @@
 ---
 title: "Working on a cluster"
-teaching: 15
+teaching: 25
 exercises: 10
 questions:
 - "What is a cluster?"
