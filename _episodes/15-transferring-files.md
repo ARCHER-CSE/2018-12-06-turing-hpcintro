@@ -3,9 +3,9 @@ title: "Transferring files"
 teaching: 30
 exercises: 10
 questions:
-- "How do I upload/download files to the cluster?"
+- "How do I upload/download files to a remote HPC system?"
 objectives:
-- "Be able to transfer files to and from a computing cluster."
+- "Be able to transfer files to and from a remote HPC system."
 keypoints:
 - "`wget` downloads a file from the internet."
 - "`sftp`/`scp` transfer files to and from your computer."
@@ -14,7 +14,7 @@ keypoints:
 
 One thing people very frequently struggle with is transferring files to and from a cluster. We'll
 cover several methods of doing this from the command line, then cover how to do this using the GUI
-program FileZilla, which is much more straightforwards.
+program FileZilla. The method you choose will be decided by what is most covenient for your workflow.
 
 ## Grabbing files from the internet
 
@@ -23,7 +23,7 @@ straightforwards: `wget https://some/link/to/a/file.tar.gz` We've actually done 
 download our example files:
 
 ```
-[remote]$ wget https://hpc-carpentry.github.io/hpc-intro/files/bash-lesson.tar.gz
+{{ site.workshop_host_prompt }} wget {{site.url}}{{site.baseurl}}/bash-lesson.tar.gz
 ```
 {: .bash}
 
@@ -113,7 +113,7 @@ sftp> pwd
 ```
 {: .bash}
 ```
-Remote working directory: /global/home/yourUsername
+Remote working directory: {{ site.workshop_host_homedir }}
 ```
 {: .output}
 
@@ -124,7 +124,7 @@ sftp> lpwd
 ```
 {: .bash}
 ```
-Local working directory: /home/jeff/Documents/teaching/hpc-intro
+Local working directory: /Users/auser
 ```
 {: .output}
 
@@ -140,7 +140,7 @@ sftp> put config.toml
 ```
 {: .bash}
 ```
-Uploading config.toml to /global/home/yourUsername/config.toml
+Uploading config.toml to {{ site.workshop_host_homedir }}/config.toml
 config.toml                                   100%  713     2.4KB/s   00:00 
 ```
 {: .output}
@@ -152,8 +152,8 @@ sftp> get config.toml
 ```
 {: .bash}
 ```
-Fetching /global/home/yourUsername/config.toml to config.toml
-/global/home/yourUsername/config.toml                               100%  713     9.3KB/s   00:00
+Fetching {{ site.workshop_host_homedir }}/config.toml to config.toml
+{{ site.workshop_host_homedir }}/config.toml                               100%  713     9.3KB/s   00:00
 ```
 {: .output}
 
@@ -166,7 +166,7 @@ sftp> put -r content/
 ```
 {: .bash}
 ```
-Uploading content/ to /global/home/yourUsername/content
+Uploading content/ to {{ site.workshop_host_homedir }}/content
 Entering content/
 content/scheduler.md              100%   11KB  21.4KB/s   00:00
 content/index.md                  100% 1051     7.2KB/s   00:00
@@ -194,7 +194,7 @@ hand side.
 
 To connect to the cluster, we'll just need to enter our credentials at the top of the screen:
 
-* Host: `sftp://login.cac.queensu.ca`
+* Host: `sftp://{{ site.workshop_host_login }}`
 * User: Your cluster username
 * Password: Your cluster password
 * Port: (leave blank to use the default port)
