@@ -43,11 +43,12 @@ to do this. The idea of the session is to help you bootstrap your use of advance
 and this will differ from individual to individual!
 
 > ## Exploring your work using HPC
+>
 > If you have a practical example of something from your area of work that you would like
 > help with getting up and running on an HPC system or exploring the performance of
 > on an HPC system, this is great! Please feel free to discuss this with us and ask
 > questions (both technical and non-technical).
-{:. challenge}
+{: .challenge}
 
 > ## Exploring the performance of GROMACS
 >
@@ -62,7 +63,7 @@ and this will differ from individual to individual!
 > In this exercise, you should try and decide on a good choice of resources and settings
 > on Cirrus for a typical biomolecular system. This will involve:
 >
-> - Downloading the input file for GROMACS from https://epcced.github.io/hpc-intro/files/ion-channel.tpr
+> - Downloading the input file for GROMACS from [{{ site.url }}{{site.baseurl }}/files/ion-channel.tpr]({{ site.url }}{{site.baseurl }}/files/ion-channel.tpr)
 > - Writing a job submission script to run GROMACS on Cirrus using the system documentation
 > - Varying the number of nodes (from 1 to 32 nodes is a good starting point) used for the GROMACS job
 >   and benchmarking the performance (in ns/day)
@@ -80,7 +81,9 @@ and this will differ from individual to individual!
 
 > ## Running many serial BLAST+ analyses in parallel
 >
-> [BLAST+]() is a...
+> [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) finds
+> regions of similarity between biological sequences. The program compares nucleotide or protein
+> sequences to sequence databases and calculates the statistical significance.
 >
 > In this exercise, you should use what you have learnt so far to set up a way to run multiple
 > serial BLAST+ analyses in parallel. There are many different ways to do this that can be used
@@ -91,12 +94,13 @@ and this will differ from individual to individual!
 > - Using GNU parallel within a node
 >
 > We have prepared an example dataset that has 100 sequences to analyse (actually this is 10
-> sequences repeated 10 times). This set is based on the BLAST GNU Parallel example at:
-> https://github.com/LangilleLab/microbiome_helper/wiki/Quick-Introduction-to-GNU-Parallel
+> sequences repeated 10 times). This set is based on the 
+> [BLAST GNU Parallel example](https://github.com/LangilleLab/microbiome_helper/wiki/Quick-Introduction-to-GNU-Parallel)
 >
 > This exercise involves:
 >
-> - Downloading and expanding the dataset to the HPC system from:  https://epcced.github.io/hpc-intro/files/parallel_example.tar.gz
+> - Downloading and expanding the dataset to the HPC system from:
+    [{{ site.url }}{{site.baseurl }}/files/parallel_example.tar.gz]({{ site.url }}{{site.baseurl }}/files/parallel_example.tar.gz)
 > - Writing a job submission script to run a single analysis using the `blast` module and the command
     `blastp -db pdb_blast_db_example/pdb_seqres.txt -query test_seq_0.fas -out output_seq_0.blast -evalue 0.0001 -word_size 7 -outfmt "6 std stitle staxids sscinames" -max_target_seqs 10 -num_threads 1` 
 >   (note that there will be no output from this alignment if it works correctly).
