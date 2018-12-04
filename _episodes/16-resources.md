@@ -133,10 +133,10 @@ $ ps
 {: .output}
 
 Note that this will only show processes from our current session. To show all processes you own
-(regardless of whether they are part of your current session or not), you can use `ps aux`.
+(regardless of whether they are part of your current session or not), you can use `ps ux`.
 
 ```
-$ ps aux
+$ ps ux
 ```
 {: .bash}
 ```
