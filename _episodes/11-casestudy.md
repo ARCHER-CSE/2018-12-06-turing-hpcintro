@@ -3,11 +3,11 @@ title: "Case Study: Constructing Complex Mesoscopic Surfaces"
 teaching: 20
 exercises: 0
 questions:
-- "Can I see an example of hw people use HPC systems?"
+- "Can I see an example of how people use HPC systems?"
 objectives:
 - "Show a real-world example of HPC system use"
 keypoints:
-- "HPC systems are a basic research tool"
+- "HPC systems are a tool that can be used in many research areas"
 ---
 
 Sophie Finnigan
